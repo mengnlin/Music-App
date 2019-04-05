@@ -1,0 +1,27 @@
+
+<%if flash[:errors]%>
+    <ul>
+        <%flash[:errors].each do |error| %> 
+            <li><%= error %> </li>
+        <% end %>
+    </ul>
+<%end%>
+
+
+<h1>Sign Up</h1>
+
+<form action="<%=users_url%>" method='POST'>
+    <%=auth_token %>
+    <label for="email">Email:
+    <input id='email' name='user[email]' value=''>
+    </label>
+    <br>
+    <br>
+    <label for="password">Password:
+    <input type='password' name='user[password]' value=''>
+    </label>
+    <br>
+    <br>
+    <input type="submit" value='Create User'>
+    <br>
+</form>

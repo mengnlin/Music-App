@@ -1,0 +1,10 @@
+
+<h1>All Your Favorite Bands</h1>
+
+<ul>
+    <% @bands.each do |band| %>
+    
+    <li>  <a href="<%=bands_url%>"> <%=band.name%> </a> </li>
+     <input type="submit" value='Edit'>
+    <% end %>
+</ul>

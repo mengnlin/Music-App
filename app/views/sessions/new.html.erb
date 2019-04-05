@@ -1,0 +1,35 @@
+
+
+<%if flash[:errors]%>
+    <ul>
+        <%flash[:errors].each do |error| %> 
+            <li><%= error %> </li>
+        <% end %>
+    </ul>
+<%end%>
+
+<h1>Sign In</h1>
+
+<form action="<%=session_url%>" method='POST'>
+    <%=auth_token %>
+    <label for="email">Email:
+    <input id='email' name='user[email]'>
+    </label>
+    <br>
+    <br>
+    <label for="password">Password:
+    <input type='password' name='user[password]'>
+    </label>
+    <br>
+    <br>
+    <input type="submit" value='Submit'>
+    <br>
+</form>
+ <br>
+ 
+<form action="<%=users_url%>" method='POST'>
+     <label for="sign-up">
+        <input type="submit" value='Sign Up Today'>
+    </label>
+
+</form>

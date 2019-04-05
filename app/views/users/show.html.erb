@@ -1,0 +1,12 @@
+<h1>User Show Page</h1>
+
+<%= @user.email %>
+
+<form action="<%=session_url%>" method='POST'>
+<%=auth_token %>
+    <input type="hidden", name='_method', value='Delete'>
+    <%=auth_token %>
+    <label for="logout">
+        <input type="submit" value='log-out'>
+    </label>
+</form>
